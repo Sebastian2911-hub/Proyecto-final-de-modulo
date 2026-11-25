@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asistente de transbordo | MicroRuta SCZ</title>
+  <!-- Estilos compartidos: el diseño está en un archivo CSS -->
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <div class="pantalla">
+    <header class="encabezado">
+    <a href="index.html" class="marca" aria-label="MicroRuta SCZ: inicio">
+       <span class="simbolo"><svg width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="2"/><circle cx="18" cy="18" r="2"/><circle cx="17" cy="6" r="2"/><path d="M8 6h6a3 3 0 0 1 0 6H9a3 3 0 0 0 0 6h7"/></svg></span>
+       <span class="logotipo">microruta.<small>SCZ</small></span>
+    </a>
+    <span class="etiqueta-encabezado">CONEXIÓN</span>
+ </header>
+    <main class="contenido">
+
+      <!-- PANTALLA 4 / TRANSBORDO -->
+      <p class="ceja">ASISTENTE DE CONEXIÓN</p>
+      <h1>Cambiá de micro<br>sin complicarte.</h1>
+      <p class="intro">Tramo 2 · Universidad → Mercado Los Pozos</p>
+      <section class="tarjeta tarjeta-linea">
+        <div class="linea-titulo"><span class="linea-letra">B</span><div><strong>Primera línea</strong><span>Desde la Universidad</span></div></div>
+        <ul class="pasos-linea"><li>Sube en la parada de la Universidad.</li><li>Baja en el punto de conexión.</li></ul>
+      </section>
+      <div class="aviso aviso-menta" style="padding:16px"><strong>↓ &nbsp;1 transbordo · aprox. 10 min</strong><p>Verifica la parada y el sentido del siguiente micro.</p></div>
+      <section class="tarjeta tarjeta-linea" style="margin-top:14px">
+        <div class="linea-titulo"><span class="linea-letra clara">C</span><div><strong>Segunda línea</strong><span>Hacia Mercado Los Pozos</span></div></div>
+        <ul class="pasos-linea"><li>Sube al siguiente micro.</li><li>Baja cerca del mercado.</li></ul>
+      </section>
+      <div class="aviso"><strong>Tiempo del tramo: 40 min</strong><p>Presupuesto estimado: Bs 4. Paradas y líneas referenciales.</p></div>
+      <div class="acciones-fijas" style="margin-top:70px">
+        <a class="boton boton-primario" href="viaje.html">Ir a la guía de viaje &nbsp; →</a>
+      </div>
+
+    </main>
+    <nav class="navegacion" aria-label="Navegación principal">
+<a href="index.html" class="" ><span class="nav-icono"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></svg></span><span>Mi día</span></a>
+<a href="mapa.html" class="" ><span class="nav-icono"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6 9 3l6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg></span><span>Mapa</span></a>
+<a href="viaje.html" class="activo" aria-current="page"><span class="nav-icono"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="16" rx="4"/><path d="M4 11h16M8 19v2M16 19v2M7 7h3M14 7h3"/><circle cx="8" cy="15" r="1"/><circle cx="16" cy="15" r="1"/></svg></span><span>Viaje</span></a>
+<a href="agenda.html" class="" ><span class="nav-icono"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 10h18M8 14h2M14 14h2"/></svg></span><span>Agenda</span></a>
+</nav>
+  </div>
+  <!-- Funciones sencillas (agregar, guardar, marcar pasos, etc.) -->
+  <script src="js/funciones.js"></script>
+</body>
+</html>
