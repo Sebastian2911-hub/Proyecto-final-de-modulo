@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agenda semanal | MicroRuta SCZ</title>
+  <!-- Estilos compartidos: el diseño está en un archivo CSS -->
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <div class="pantalla">
+    <header class="encabezado">
+    <a href="index.html" class="marca" aria-label="MicroRuta SCZ: inicio">
+       <span class="simbolo"><svg width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="2"/><circle cx="18" cy="18" r="2"/><circle cx="17" cy="6" r="2"/><path d="M8 6h6a3 3 0 0 1 0 6H9a3 3 0 0 0 0 6h7"/></svg></span>
+       <span class="logotipo">microruta.<small>SCZ</small></span>
+    </a>
+    <span class="etiqueta-encabezado">AGENDA</span>
+ </header>
+    <main class="contenido">
+
+      <!-- PANTALLA 6 / AGENDA -->
+      <p class="ceja">MIS RUTINAS</p>
+      <h1>Tu semana,<br>a tu manera.</h1>
+      <p class="intro">Guarda tus recorridos frecuentes y repítelos.</p>
+      <div class="dias-semana" aria-label="Semana de ejemplo: 23 a 29 de noviembre">
+        <button type="button" class="dia seleccionado" aria-pressed="true" onclick="seleccionarDia(this)"><small>Lun</small><strong>23</strong></button>
+        <button type="button" class="dia" aria-pressed="false" onclick="seleccionarDia(this)"><small>Mar</small><strong>24</strong></button>
+        <button type="button" class="dia" aria-pressed="false" onclick="seleccionarDia(this)"><small>Mié</small><strong>25</strong></button>
+        <button type="button" class="dia" aria-pressed="false" onclick="seleccionarDia(this)"><small>Jue</small><strong>26</strong></button>
+        <button type="button" class="dia" aria-pressed="false" onclick="seleccionarDia(this)"><small>Vie</small><strong>27</strong></button>
+        <button type="button" class="dia" aria-pressed="false" onclick="seleccionarDia(this)"><small>Sáb</small><strong>28</strong></button>
+        <button type="button" class="dia" aria-pressed="false" onclick="seleccionarDia(this)"><small>Dom</small><strong>29</strong></button>
+      </div>
+      <div class="titulo-seccion"><h2>Mis planes guardados</h2><small>3 rutinas</small></div>
+      <p class="mensaje-exito oculto" id="aviso-guardado">✓ Tu recorrido de universidad está guardado en esta agenda.</p>
+      <article class="tarjeta plan-tarjeta"><h3>Día de universidad</h3><p>Bs 8 · 1 h 40 en micro</p><div class="camino">Casa → Universidad → Mercado → Casa</div><div class="plan-acciones"><span class="plan-fecha">Lun a Vie · 07:00</span><a href="resultado.html">Ver plan →</a></div></article>
+      <article class="tarjeta plan-tarjeta"><h3>Día de trámites</h3><p>Bs 6 · 1 h 10 referencial</p><div class="camino">Casa → Banco → Mercado</div><div class="plan-acciones"><span class="plan-fecha">Sábado</span><a href="resultado.html">Ver plan →</a></div></article>
+      <article class="tarjeta plan-tarjeta"><h3>Universidad + trabajo</h3><p>Bs 6 · 1 h 05 referencial</p><div class="camino">Trabajo → Universidad → Casa</div><div class="plan-acciones"><span class="plan-fecha">Lun a Vie · 17:30</span><a href="resultado.html">Ver plan →</a></div></article>
+      <p class="nota" style="margin-top:17px">Semana de ejemplo · 23 al 29 de noviembre.</p>
+      <div class="acciones-fijas" style="margin-top:20px">
+         <a class="boton boton-primario" href="index.html">Planear un nuevo día &nbsp; +</a>
+      </div>
+
+    </main>
+    <nav class="navegacion" aria-label="Navegación principal">
+<a href="index.html" class="" ><span class="nav-icono"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></svg></span><span>Mi día</span></a>
+<a href="mapa.html" class="" ><span class="nav-icono"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6 9 3l6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg></span><span>Mapa</span></a>
+<a href="viaje.html" class="" ><span class="nav-icono"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="16" rx="4"/><path d="M4 11h16M8 19v2M16 19v2M7 7h3M14 7h3"/><circle cx="8" cy="15" r="1"/><circle cx="16" cy="15" r="1"/></svg></span><span>Viaje</span></a>
+<a href="agenda.html" class="activo" aria-current="page"><span class="nav-icono"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 10h18M8 14h2M14 14h2"/></svg></span><span>Agenda</span></a>
+</nav>
+  </div>
+  <!-- Funciones sencillas (agregar, guardar, marcar pasos, etc.) -->
+  <script src="js/funciones.js"></script>
+</body>
+</html>

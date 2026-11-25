@@ -1,0 +1,143 @@
+/* ====================================================
+   MICRORUTA SCZ – ESTILOS DE LAS 6 PANTALLAS
+   Un solo archivo CSS, compartido por todas las páginas.
+   ==================================================== */
+:root {
+  --verde: #005955;
+  --verde-oscuro: #005451;
+  --verde-medio: #008f80;
+  --menta: #32e1c0;
+  --menta-claro: #dcfaf3;
+  --fondo: #f2faf8;
+  --texto-secundario: #4d7774;
+  --blanco: #ffffff;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; padding: 24px; background: #e6e6e6; color: var(--verde); font-family: Arial, Helvetica, sans-serif; }
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; font: inherit; }
+button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid #0abda9; outline-offset: 3px; }
+.pantalla { max-width: 450px; min-height: 940px; margin: 0 auto; background: var(--fondo); display: flex; flex-direction: column; box-shadow: 0 8px 24px rgba(0, 30, 35, .07); }
+.encabezado { height: 84px; flex-shrink: 0; padding: 18px 24px 8px; display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+.marca { display:flex; align-items:center; gap: 11px; min-width: 0; }
+.simbolo { width: 40px; height: 40px; border-radius: 12px; background: var(--verde); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.simbolo svg { width: 27px; height: 27px; }
+.logotipo { font-size: 27px; font-weight: 800; letter-spacing: -1.3px; line-height: 1; white-space: nowrap; }
+.logotipo small { font-size: 12px; letter-spacing: 0; margin-left: 8px; font-weight: bold; }
+.etiqueta-encabezado { font-size: 11px; font-weight: bold; margin-top: 16px; color: #3f736d; white-space: nowrap; }
+.contenido { flex: 1; padding: 16px 23px 8px; }
+.ceja { margin: 0 0 10px; font-size: 12px; letter-spacing: .1px; font-weight: bold; color: #3e7570; text-transform: uppercase; }
+h1 { margin: 0 0 6px; font-size: 35px; font-weight: 800; letter-spacing: -.85px; line-height: 1.13; color: var(--verde); }
+h2 { font-size: 22px; margin: 0 0 11px; letter-spacing: -.4px; line-height: 1.14; }
+h3 { font-size: 16px; margin:0; line-height: 1.25; }
+p { margin:0; }
+.intro { font-size: 16px; line-height: 1.4; color: var(--texto-secundario); margin-bottom: 12px; }
+.tarjeta-oscura { background: var(--verde-oscuro); color: white; border-radius: 26px; padding: 19px 18px 21px; margin: 12px 0 17px; }
+.tarjeta-oscura .ceja { color: #e6fffa; margin-bottom: 8px; }
+.tarjeta-oscura h2 { color: #fff; font-size: 25px; margin-bottom: 2px; }
+.tarjeta-oscura p { color: #daf3ef; font-size: 13.5px; }
+.estadisticas { display:flex; justify-content: space-between; gap: 8px; margin-top: 21px; }
+.estadistica { min-width: 0; }
+.estadistica strong { display:block; color:#fff; font-size: 25px; line-height: 1.3; }
+.estadistica span { display:block; font-size: 12px; color: #d2eae5; margin-top: 2px; }
+.titulo-seccion { display:flex; align-items: center; justify-content: space-between; gap:12px; margin: 12px 0 10px; }
+.titulo-seccion h2 { margin:0; }
+.titulo-seccion small { font-size: 12px; font-weight: bold; white-space:nowrap; }
+.tarjeta { background: white; border-radius: 20px; padding: 15px 15px; margin-bottom: 10px; }
+.lista-actividades { padding: 13px 14px; margin-bottom: 10px; }
+.actividad { display:flex; align-items:center; gap: 12px; min-height: 62px; padding: 6px 0; }
+.actividad-icono { display:flex; align-items:center; justify-content:center; width:43px; height:43px; flex-shrink:0; border-radius:13px; background: var(--menta-claro); color:var(--verde); font-size:21px; font-weight:bold; }
+.actividad-icono svg { height:23px; width:23px; }
+.actividad-texto { flex:1; min-width:0; }
+.actividad-texto strong { font-size:16px; display:block; margin-bottom:3px; }
+.actividad-texto span { font-size:13px; color: var(--texto-secundario); }
+.mover { background:transparent; border:0; padding:5px 8px; font-size:22px; color: #37736f; }
+.boton { border: 0; width: 100%; min-height: 50px; padding: 12px 13px; border-radius: 16px; font-size: 16px; font-weight:bold; display: flex; align-items:center; justify-content:center; gap:8px; text-align:center; }
+.boton-primario { background: var(--menta); color: var(--verde); }
+.boton-suave { background: var(--menta-claro); color: var(--verde); }
+.boton-blanco { background: var(--blanco); color: var(--verde); border:1px solid #d3f5ee; }
+.boton:hover { filter: brightness(.97); }
+.boton-pequeno { min-height: 41px; font-size: 14px; border-radius: 14px; }
+.acciones-fijas { display:grid; gap: 6px; margin-top: auto; padding-top: 9px; }
+.fila-interruptor { display:flex; align-items:center; justify-content: space-between; gap:10px; font-size: 14px; padding: 12px 0; }
+.interruptor { width: 45px; height: 27px; border:0; border-radius: 15px; background: #9db9b4; padding: 3px; display:flex; align-items:center; justify-content:flex-start; }
+.interruptor span { width: 21px; height: 21px; background: white; border-radius:50%; display:block; }
+.interruptor.activo { background: var(--verde); justify-content:flex-end; }
+.nota { color:var(--texto-secundario); font-size: 12px; line-height: 1.45; margin: 8px 0 5px; }
+/* Barra inferior: enlaces HTML normales hacia otras pantallas */
+.navegacion { display:grid; grid-template-columns: repeat(4,1fr); align-items:stretch; background:#fff; min-height:76px; margin-top: 7px; padding: 8px 12px 6px; flex-shrink:0; }
+.navegacion a { display:flex; align-items:center; flex-direction:column; text-align:center; justify-content:center; gap:4px; font-size:12px; font-weight:bold; }
+.nav-icono { height:35px; width:70px; display:flex; justify-content:center; align-items:center; border-radius: 15px; }
+.nav-icono svg { width:24px; height:24px; stroke: var(--verde); }
+.navegacion a.activo .nav-icono { background:var(--menta-claro); }
+/* Pantalla 2: resultado */
+.conjunto-opciones { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:3px; background:var(--menta-claro); padding:5px; border-radius:15px; margin-bottom:16px; }
+.opcion { border:0; background:transparent; padding:11px 1px; border-radius:12px; color:#497873; font-size:13px; font-weight:bold; }
+.opcion.seleccionada { background:white; color:var(--verde); }
+.tramo { display:flex; align-items:center; gap:12px; padding: 13px 13px; margin-bottom:8px; }
+.numero-tramo { font-size:13px; font-weight:bold; display:flex; align-items:center; justify-content:center; flex-shrink:0; width:36px; height:36px; border-radius:11px; background:var(--menta-claro); }
+.tramo-texto { flex:1; min-width:0; }
+.tramo-texto h3 { margin-bottom:4px; }
+.tramo-texto p { font-size:13px; color:var(--texto-secundario); }
+.tramo-cifras { text-align:right; flex-shrink:0; }
+.tramo-cifras strong { display:block; font-size:15px; }
+.tramo-cifras span { display:block; margin-top:4px; color: var(--texto-secundario); font-size:13px; }
+.aviso { background:var(--menta-claro); padding: 14px 16px; border-radius: 17px; margin: 12px 0 7px; }
+.aviso fuerte, .aviso strong { display:block; font-size:14px; margin-bottom:5px; }
+.aviso p { font-size:13px; line-height:1.45; color:var(--texto-secundario); }
+.aviso-menta { background:#c8f8ee; }
+/* Pantalla 3: mapa */
+.mapa-ilustrativo { width:100%; margin:14px 0 12px; aspect-ratio: 400/264; border-radius:0; overflow:hidden; background:#e4f4ef; }
+.mapa-ilustrativo svg { display:block; width:100%; height:100%; }
+.leyenda { display:flex; justify-content:space-between; gap:4px; margin: 0 0 20px; color:var(--texto-secundario); font-size:13px; }
+.punto { display:inline-block; width:10px; height:10px; border-radius:50%; margin-right:5px; vertical-align:middle; }
+.punto.ida { background:#005955; } .punto.conexion{ background:#009d89; } .punto.regreso{background:#31dfc0;}
+.agenda-viaje { display:grid; gap:0; padding: 5px 12px; }
+.hora-evento { display:grid; grid-template-columns:53px 14px 1fr auto; align-items:center; min-height:43px; gap:6px; font-size:13px; }
+.hora-evento strong { font-size:14px; }
+.hora-evento .momento { color:var(--texto-secundario); font-size:12px; }
+/* Pantalla 4: transbordos */
+.tarjeta-linea { padding:16px; }
+.linea-titulo { display:flex; align-items:center; gap:12px; margin-bottom:12px; }
+.linea-letra { width:48px; height:48px; display:flex; justify-content:center; align-items:center; border-radius:13px; background:var(--verde); color:white; font-size:26px; font-weight:bold; }
+.linea-letra.clara { background:var(--verde-medio); }
+.linea-titulo strong { font-size:16px; }
+.linea-titulo span { display:block; font-size:13px; color:var(--texto-secundario); margin-top:5px; }
+.pasos-linea { list-style:none; padding:0 0 0 3px; margin:0; }
+.pasos-linea li { position:relative; margin:12px 0; padding-left:23px; font-size:14px; }
+.pasos-linea li:before { content:''; background:var(--verde-medio); width:9px; height:9px; border-radius:50%; position:absolute; left:1px; top:5px; }
+/* Pantalla 5: progreso */
+.fila-progreso { display:flex; align-items:center; justify-content:space-between; margin: 19px 0 12px; }
+.fila-progreso h2{margin:0;}
+.fila-progreso strong{font-size:13px;}
+.barra-progreso { display:grid; grid-template-columns:repeat(4,1fr); gap:6px; margin-bottom:20px; }
+.segmento { height:6px; background:var(--menta-claro); border-radius:8px; }
+.segmento.listo { background:var(--menta); }
+.paso-viaje { width:100%; display:flex; text-align:left; align-items:center; gap:13px; background:#fff; border:2px solid transparent; border-radius:17px; padding: 13px 12px; margin-bottom:7px; }
+.paso-viaje.marcado { border-color:var(--menta); }
+.paso-check { width:28px; height:28px; border-radius:9px; background:var(--menta-claro); flex-shrink:0; color:var(--verde); display:flex; align-items:center; justify-content:center; font-weight:bold; }
+.paso-viaje strong { display:block; font-size:16px; }
+.paso-viaje small { display:block; margin-top:5px; font-size:13px; line-height:1.35; color:var(--texto-secundario); }
+/* Pantalla 6: agenda semanal */
+.dias-semana { display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); gap:5px; margin: 17px 0 20px; }
+.dia { border:0; padding:11px 1px; background:white; border-radius:13px; display:flex; align-items:center; flex-direction:column; gap:7px; color:var(--verde); }
+.dia small { font-size:11px; font-weight:normal; color:var(--texto-secundario); }
+.dia strong { font-size:16px; }
+.dia.seleccionado { background:var(--verde); color:white; }
+.dia.seleccionado small { color:#c8e7e1; }
+.plan-tarjeta { padding:15px 14px 13px; margin-bottom: 10px; }
+.plan-tarjeta h3 { font-size: 17px; margin-bottom:5px; }
+.plan-tarjeta p { font-size:13px; color:var(--texto-secundario); margin-bottom:6px; }
+.plan-tarjeta .camino { font-size:14px; font-weight:bold; line-height:1.3; margin-bottom:12px; }
+.plan-acciones { display:flex; align-items:center; justify-content:space-between; gap:8px; }
+.plan-fecha { display:inline-block; background:var(--menta-claro); padding:7px 11px; border-radius:20px; font-size:12px; font-weight:bold; }
+.plan-acciones a { font-size:13px; font-weight:bold; white-space:nowrap; }
+.mensaje-exito { padding: 9px 12px; border-radius: 10px; background:#c8f8ee; color:var(--verde); font-size:13px; margin-bottom:12px; }
+.oculto { display:none !important; }
+/* Diseño adaptable: en celular ocupa todo el ancho */
+@media(max-width:480px){body{padding:0;background:var(--fondo);} .pantalla{max-width:none; min-height:100dvh;box-shadow:none;} .logotipo{font-size:25px;} h1{font-size:34px;} .contenido{padding:13px 20px 8px;} .encabezado{padding:18px 20px 8px;} .navegacion{position:sticky;bottom:0;} }
+@media(max-width:365px){.logotipo{font-size:21px;} .logotipo small{font-size:10px;margin-left:3px;} h1{font-size:30px;} .estadistica strong{font-size:22px;} .estadistica span{font-size:11px;} .etiqueta-encabezado{font-size:10px;} .contenido{padding-left:16px;padding-right:16px;} .paso-viaje strong{font-size:14px;} }
+/* Correcciones de la letra dentro de las insignias y el color de los pasos */
+.linea-titulo .linea-letra { display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:26px; color:#fff; margin-top:0; }
+.paso-viaje { color:var(--verde); }
